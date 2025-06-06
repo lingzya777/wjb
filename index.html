@@ -1,0 +1,1859 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>善氏高清跑商价格指引</title>
+    <!-- 添加favicon -->
+    <link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="80" font-size="80" font-family="Microsoft YaHei">善</text></svg>'>
+    <style>
+        :root[data-theme="light"] {
+            --primary-color: #2c3e50;
+            --border-color: #e0e0e0;
+            --hover-color: #f5f6fa;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --bg-color: #f8f9fa;
+            --table-bg: rgba(255, 255, 255, 0.9);
+            --text-color: #2c3e50;
+            --header-bg: rgba(248, 249, 250, 0.95);
+            --special-price-color: #e74c3c;
+            --price-color: #2c3e50;
+            --hover-bg: rgba(245, 246, 250, 0.7);
+            --region-opacity: 0.5;
+            --region-column-opacity: 0.8;
+            --particle-color1: rgba(255, 143, 180, 0.85);
+            --particle-color2: rgba(255, 166, 193, 0.75);
+            --particle-shadow: 0 0 10px rgba(255, 143, 180, 0.4);
+            --gradient-start: #ffecd2;
+            --gradient-middle: #fcb69f;
+            --gradient-end: #ffdbed;
+        }
+
+        :root[data-theme="dark"] {
+            --primary-color: #ecf0f1;
+            --border-color: #455a74;
+            --hover-color: #2c3e50;
+            --shadow-color: rgba(0, 0, 0, 0.3);
+            --bg-color: #1a1a1a;
+            --table-bg: #2c3e50;
+            --text-color: #ecf0f1;
+            --header-bg: #34495e;
+            --special-price-color: #ff6b6b;
+            --price-color: #ecf0f1;
+            --hover-bg: rgba(52, 73, 94, 0.7);
+            --region-opacity: 0.2;
+            --region-column-opacity: 0.4;
+            --particle-color1: rgba(236, 240, 241, 0.8);
+            --particle-color2: rgba(236, 240, 241, 0.6);
+            --particle-shadow: 0 0 10px rgba(236, 240, 241, 0.3);
+        }
+
+        /* 主题切换按钮 */
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 16px 10px 40px;
+            border-radius: 25px;
+            background: var(--header-bg);
+            backdrop-filter: blur(10px);
+            color: var(--text-color);
+            border: 2px solid var(--border-color);
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px var(--shadow-color);
+            z-index: 1000;
+            overflow: hidden;
+            font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-weight: 500;
+        }
+
+        .theme-toggle::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 18px;
+            height: 18px;
+            transition: all 0.3s ease;
+        }
+
+        /* 简洁的太阳图标 */
+        [data-theme="light"] .theme-toggle::before {
+            background: var(--text-color);
+            border-radius: 50%;
+            box-shadow: 0 0 12px var(--text-color);
+        }
+
+        /* 简洁的月亮图标 */
+        [data-theme="dark"] .theme-toggle::before {
+            background: transparent;
+            border: 2px solid transparent;
+            box-shadow: inset -3px -3px 0 var(--text-color);
+            border-radius: 50%;
+            transform: translateY(-50%) rotate(220deg);
+        }
+
+        /* 悬浮效果 */
+        .theme-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px var(--shadow-color);
+            border-color: var(--special-price-color);
+        }
+
+        .theme-toggle:active {
+            transform: translateY(0);
+        }
+
+        .theme-toggle::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0.1),
+                rgba(255, 255, 255, 0.2)
+            );
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .theme-toggle:hover::after {
+            opacity: 1;
+        }
+
+        /* 全局过渡效果 */
+        * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            padding: 20px;
+            margin: 0;
+            box-sizing: border-box;
+            color: var(--text-color);
+            min-height: 100vh;
+            background-color: var(--bg-color);
+        }
+
+        /* 日间模式渐变背景 */
+        [data-theme="light"] body {
+            background: linear-gradient(135deg, 
+                var(--gradient-start) 0%,
+                var(--gradient-middle) 50%,
+                var(--gradient-end) 100%
+            );
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 标题装饰样式 */
+        .title-container {
+            text-align: center;
+            margin-bottom: 2em;
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .title-container::before,
+        .title-container::after {
+            content: '❀';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: var(--particle-color1);
+            animation: floatFlower 2s ease-in-out infinite;
+        }
+
+        .title-container::before {
+            left: 25%;
+        }
+
+        .title-container::after {
+            right: 25%;
+        }
+
+        h1 {
+            display: inline-block;
+            position: relative;
+            color: var(--text-color);
+            font-size: 2.2em;
+            text-shadow: 2px 2px 4px var(--shadow-color);
+            margin: 0;
+            padding: 0 60px;
+        }
+
+        h1::before,
+        h1::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(to var(--direction, right), var(--particle-color1), transparent);
+        }
+
+        h1::before {
+            left: 0;
+            --direction: right;
+        }
+
+        h1::after {
+            right: 0;
+            --direction: left;
+        }
+
+        .subtitle {
+            font-size: 0.9em;
+            color: var(--text-color);
+            opacity: 0.8;
+            margin-top: 10px;
+            font-style: italic;
+            transition: all 0.3s ease;
+        }
+
+        @keyframes floatFlower {
+            0%, 100% {
+                transform: translateY(-50%) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-50%) rotate(15deg);
+            }
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            position: relative;
+            background: var(--table-bg);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px var(--shadow-color);
+            padding: 15px;
+            backdrop-filter: blur(10px);
+            max-height: calc(100vh - 200px);
+            /* 添加剪切属性 */
+            clip-path: inset(0 0 0 0);
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 0;
+            width: 100%;
+            margin: 0;
+            min-width: 1000px;
+            background: transparent;
+        }
+
+        th, td {
+            border: none;
+            padding: 12px 15px;
+            text-align: center;
+            white-space: nowrap;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+
+        thead {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: var(--header-bg);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px var(--shadow-color);
+            /* 添加遮罩效果 */
+            isolation: isolate;
+        }
+
+        thead::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -100px; /* 延伸到表头上方 */
+            height: 100px; /* 遮罩高度 */
+            background: var(--header-bg);
+            z-index: 9;
+        }
+
+        th {
+            background-color: var(--header-bg);
+            backdrop-filter: blur(5px);
+            color: var(--text-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            position: relative;
+            z-index: 11; /* 确保在遮罩之上 */
+            border-bottom: 2px solid var(--border-color);
+            padding: 20px 15px;
+            height: 30px;
+            line-height: 1.4;
+            vertical-align: middle;
+        }
+
+        thead tr:first-child th {
+            padding: 25px 15px;
+            height: 35px;
+        }
+
+        td {
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 12px 15px; /* 确保数据单元格的内边距一致 */
+        }
+
+        tbody tr {
+            background-color: transparent;
+            transition: background-color 0.3s ease;
+        }
+
+        tbody tr:hover {
+            background-color: var(--hover-bg) !important;
+        }
+
+        /* 固定左侧列样式 */
+        .region-column {
+            position: sticky;
+            left: 0;
+            z-index: 2;
+            font-weight: 700;
+            min-width: 100px;
+            border-right: 2px solid var(--border-color);
+            box-shadow: 2px 0 5px var(--shadow-color);
+            background: var(--table-bg); /* 添加背景色，防止透明 */
+        }
+
+        /* 表头左上角单元格 */
+        .corner-header {
+            position: sticky;
+            left: 0;
+            z-index: 12; /* 确保在最上层 */
+            background-color: var(--header-bg) !important;
+            backdrop-filter: blur(5px);
+            border-right: 2px solid var(--border-color);
+            box-shadow: 2px 0 5px var(--shadow-color);
+        }
+
+        /* 地区样式 */
+        .region-帮会 { 
+            background-color: rgba(255, 248, 220, var(--region-opacity)); 
+        }
+        .region-帮会 .region-column {
+            background-color: rgba(255, 248, 220, var(--region-column-opacity));
+        }
+
+        .region-汴京 { 
+            background-color: rgba(176, 224, 230, var(--region-opacity)); 
+        }
+        .region-汴京 .region-column {
+            background-color: rgba(176, 224, 230, var(--region-column-opacity));
+        }
+
+        .region-磁洲 { 
+            background-color: rgba(255, 182, 193, var(--region-opacity)); 
+        }
+        .region-磁洲 .region-column {
+            background-color: rgba(255, 182, 193, var(--region-column-opacity));
+        }
+
+        .region-宋辽边境 { 
+            background-color: rgba(152, 251, 152, var(--region-opacity)); 
+        }
+        .region-宋辽边境 .region-column {
+            background-color: rgba(152, 251, 152, var(--region-column-opacity));
+        }
+
+        .region-桃花坞 { 
+            background-color: rgba(255, 215, 229, var(--region-opacity)); 
+        }
+        .region-桃花坞 .region-column {
+            background-color: rgba(255, 215, 229, var(--region-column-opacity));
+        }
+
+        .region-杭州 { 
+            background-color: rgba(173, 216, 230, var(--region-opacity)); 
+        }
+        .region-杭州 .region-column {
+            background-color: rgba(173, 216, 230, var(--region-column-opacity));
+        }
+
+        .region-毁诺城 { 
+            background-color: rgba(221, 160, 221, var(--region-opacity)); 
+        }
+        .region-毁诺城 .region-column {
+            background-color: rgba(221, 160, 221, var(--region-column-opacity));
+        }
+
+        .region-仙居原 { 
+            background-color: rgba(255, 160, 122, var(--region-opacity)); 
+        }
+        .region-仙居原 .region-column {
+            background-color: rgba(255, 160, 122, var(--region-column-opacity));
+        }
+
+        .special-price {
+            color: var(--special-price-color);
+            font-weight: 800;
+        }
+
+        /* 价格列样式 */
+        td:nth-child(3), td:nth-child(4) {
+            font-weight: 700;
+            color: var(--price-color);
+        }
+
+        /* 响应式设计 */
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+            }
+
+            th, td {
+                padding: 8px 10px;
+                font-size: 13px;
+            }
+
+            .table-container {
+                padding: 10px;
+                border-radius: 8px;
+            }
+        }
+
+        /* 滚动条美化 */
+        .table-container::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        .table-container::-webkit-scrollbar-track {
+            background: rgba(248, 249, 250, 0.3);
+            border-radius: 4px;
+        }
+
+        .table-container::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 4px;
+        }
+
+        .table-container::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-color);
+        }
+
+        /* 添加动画效果 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes snowfall {
+            0% {
+                transform: translate(0, -10px) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(var(--end-x, 100px), var(--end-y, 100vh)) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes sakurafall {
+            0% {
+                transform: translate(0, -10px) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            90% {
+                opacity: 0.6;
+            }
+            100% {
+                transform: translate(var(--end-x, 100px), var(--end-y, 100vh)) rotate(var(--rotate-deg, 360deg));
+                opacity: 0;
+            }
+        }
+
+        .particle {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1000;
+            animation-timing-function: ease-in-out;
+        }
+
+        /* 樱花样式 */
+        .sakura {
+            width: 12px;
+            height: 8px;
+            background: var(--particle-color1);
+            box-shadow: var(--particle-shadow);
+            border-radius: 12px 1px;
+            opacity: 0.8;
+            animation: sakurafall linear infinite;
+        }
+
+        .sakura::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: var(--particle-color2);
+            border-radius: 12px 1px;
+            transform: rotate(15deg);
+        }
+
+        /* 雪花样式 */
+        .snowflake {
+            background: var(--particle-color1);
+            border-radius: 50%;
+            box-shadow: var(--particle-shadow);
+            animation: snowfall linear infinite;
+        }
+
+        .snowflake::before,
+        .snowflake::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            border-radius: inherit;
+        }
+
+        .snowflake::before {
+            transform: rotate(45deg);
+        }
+
+        .snowflake::after {
+            transform: rotate(90deg);
+        }
+
+        /* 标题动画 */
+        h1 {
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* 表格容器动画 */
+        .table-container {
+            animation: fadeIn 1s ease-out 0.3s backwards;
+        }
+
+        /* 主题切换按钮动画 */
+        .theme-toggle, .effect-toggle {
+            animation: fadeIn 1s ease-out 0.6s backwards;
+        }
+
+        /* 表格行动画 */
+        tbody tr {
+            opacity: 0;
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+
+        /* 为每行设置不同的延迟 */
+        tbody tr:nth-child(1) { animation-delay: 0.1s; }
+        tbody tr:nth-child(2) { animation-delay: 0.2s; }
+        tbody tr:nth-child(3) { animation-delay: 0.3s; }
+        tbody tr:nth-child(4) { animation-delay: 0.4s; }
+        tbody tr:nth-child(5) { animation-delay: 0.5s; }
+        tbody tr:nth-child(6) { animation-delay: 0.6s; }
+        tbody tr:nth-child(7) { animation-delay: 0.7s; }
+        tbody tr:nth-child(8) { animation-delay: 0.8s; }
+        tbody tr:nth-child(9) { animation-delay: 0.9s; }
+        tbody tr:nth-child(10) { animation-delay: 1.0s; }
+
+        /* 价格高亮动画 */
+        @keyframes priceHighlight {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+                color: var(--special-price-color);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .special-price:hover {
+            animation: priceHighlight 0.5s ease-out;
+        }
+
+        /* 主题切换过渡效果增强 */
+        .theme-transition {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* 表格悬浮效果增强 */
+        tbody tr {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        tbody tr:hover {
+            transform: translateX(5px);
+            box-shadow: -5px 0 10px var(--shadow-color);
+        }
+
+        /* 商品名称和价格高亮效果 */
+        .product-name {
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .product-name:hover {
+            color: var(--special-price-color);
+            transform: scale(1.05);
+            font-weight: bold;
+            text-shadow: 0 0 8px var(--shadow-color);
+            z-index: 2;
+        }
+
+        .product-name::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: var(--hover-color);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .product-name:hover::after {
+            opacity: 1;
+            box-shadow: 0 0 15px var(--shadow-color);
+            border-radius: 4px;
+        }
+
+        .product-name.active {
+            color: var(--special-price-color);
+            font-weight: bold;
+            background: var(--hover-color);
+            box-shadow: 0 0 15px var(--shadow-color);
+            border-radius: 4px;
+            transform: scale(1.05);
+        }
+
+        .sell-price {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .price-highlight-highest {
+            color: var(--special-price-color) !important;
+            font-weight: bold;
+            transform: scale(1.1);
+            text-shadow: 0 0 8px var(--particle-shadow);
+        }
+
+        .price-highlight-second {
+            color: #ff9800 !important;
+            font-weight: bold;
+            transform: scale(1.05);
+            text-shadow: 0 0 6px rgba(255, 152, 0, 0.4);
+        }
+
+        /* 价格标签样式 */
+        .price-tooltip {
+            position: absolute;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            pointer-events: none;
+            transform: translateY(-100%);
+            margin-top: -20px;
+            z-index: 1000;
+            white-space: nowrap;
+            opacity: 0;
+            transition: all 0.3s ease;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            font-weight: bold;
+        }
+
+        /* 安全区域标签样式 */
+        .price-tooltip-safe {
+            background: rgba(46, 204, 113, 0.9);
+            color: white;
+            text-shadow: 0 0 8px rgba(46, 204, 113, 0.4);
+        }
+
+        .price-tooltip-safe::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid rgba(46, 204, 113, 0.9);
+        }
+
+        /* 危险区域标签样式 */
+        .price-tooltip-danger {
+            background: rgba(231, 76, 60, 0.9);
+            color: white;
+            text-shadow: 0 0 8px rgba(231, 76, 60, 0.4);
+        }
+
+        .price-tooltip-danger::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 4px solid transparent;
+            border-right: 4px solid transparent;
+            border-top: 4px solid rgba(231, 76, 60, 0.9);
+        }
+
+        .price-tooltip.show {
+            opacity: 1;
+        }
+
+        /* 修改视按钮样式 */
+        .effect-toggle {
+            position: fixed;
+            top: 20px;
+            right: 100px;
+            padding: 10px 16px 10px 40px;
+            border-radius: 25px;
+            background: var(--header-bg);
+            backdrop-filter: blur(10px);
+            color: var(--text-color);
+            border: 2px solid var(--border-color);
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px var(--shadow-color);
+            z-index: 1000;
+            overflow: hidden;
+            font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-weight: 500;
+        }
+
+        .effect-toggle::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 18px;
+            height: 18px;
+            transition: all 0.3s ease;
+        }
+
+        /* 开启状态的图标 */
+        [data-effect="on"] .effect-toggle::before {
+            border: 2px solid var(--text-color);
+            border-radius: 50%;
+            background: transparent;
+            box-shadow: 0 0 8px var(--text-color);
+        }
+
+        [data-effect="on"] .effect-toggle::after {
+            content: '';
+            position: absolute;
+            left: 21px;
+            top: 50%;
+            width: 6px;
+            height: 6px;
+            background: var(--text-color);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 4px var(--text-color);
+        }
+
+        /* 关闭状态的图标 */
+        [data-effect="off"] .effect-toggle::before {
+            border: 2px solid var(--text-color);
+            border-radius: 50%;
+            height: 4px;
+            background: transparent;
+            box-shadow: 0 0 8px var(--text-color);
+        }
+
+        [data-effect="off"] .effect-toggle::after {
+            content: '';
+            position: absolute;
+            left: 21px;
+            top: 50%;
+            width: 6px;
+            height: 2px;
+            background: var(--text-color);
+            border-radius: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 4px var(--text-color);
+        }
+
+        .effect-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px var(--shadow-color);
+            border-color: var(--special-price-color);
+        }
+
+        .effect-toggle:active {
+            transform: translateY(0);
+        }
+
+        /* 添加区域指示器样式 */
+        .region-indicator {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-left: 8px;
+            font-weight: normal;
+            text-transform: none;
+            vertical-align: middle;
+        }
+
+        .region-indicator.safe {
+            background: rgba(46, 204, 113, 0.9);
+            color: white;
+            text-shadow: 0 0 8px rgba(46, 204, 113, 0.4);
+        }
+
+        .region-indicator.danger {
+            background: rgba(231, 76, 60, 0.9);
+            color: white;
+            text-shadow: 0 0 8px rgba(231, 76, 60, 0.4);
+            margin-left: 4px;
+        }
+
+        /* 安全区切换按钮样式 */
+        .safe-toggle {
+            position: fixed;
+            top: 20px;
+            right: 180px;
+            padding: 10px 16px 10px 40px;
+            border-radius: 25px;
+            background: var(--header-bg);
+            backdrop-filter: blur(10px);
+            color: var(--text-color);
+            border: 2px solid var(--border-color);
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px var(--shadow-color);
+            z-index: 1000;
+            overflow: hidden;
+            font-family: "Microsoft YaHei", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-weight: 500;
+            opacity: 0;
+            animation: fadeIn 0.6s ease-out 0.6s forwards;
+        }
+
+        .safe-toggle::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 18px;
+            height: 18px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--text-color);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--text-color);
+        }
+
+        [data-safe-mode="on"] .safe-toggle::before {
+            background: rgba(46, 204, 113, 0.9);
+            box-shadow: 0 0 12px rgba(46, 204, 113, 0.6);
+        }
+
+        [data-safe-mode="off"] .safe-toggle::before {
+            background: rgba(231, 76, 60, 0.9);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 8px rgba(231, 76, 60, 0.6);
+            }
+            50% {
+                box-shadow: 0 0 16px rgba(231, 76, 60, 0.8);
+            }
+            100% {
+                box-shadow: 0 0 8px rgba(231, 76, 60, 0.6);
+            }
+        }
+
+        .safe-toggle:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px var(--shadow-color);
+            border-color: var(--special-price-color);
+        }
+
+        .safe-toggle:active {
+            transform: translateY(0);
+        }
+
+        .safe-toggle::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0.1),
+                rgba(255, 255, 255, 0.2)
+            );
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .safe-toggle:hover::after {
+            opacity: 1;
+        }
+
+        /* 按钮提示样式 */
+        .button-tooltip {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 8px;
+            padding: 6px 12px;
+            background: var(--header-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1001;
+            box-shadow: 0 2px 8px var(--shadow-color);
+        }
+
+        .button-tooltip::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            width: 8px;
+            height: 8px;
+            background: inherit;
+            border-left: 1px solid var(--border-color);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .theme-toggle:hover .button-tooltip,
+        .effect-toggle:hover .button-tooltip,
+        .safe-toggle:hover .button-tooltip {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* 表头模式文字样式 */
+        .mode-text {
+            font-size: 14px;
+            font-weight: normal;
+            opacity: 0.8;
+            margin-left: 8px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            vertical-align: middle;
+            color: var(--text-color);
+        }
+
+        [data-safe-mode="on"] .mode-text.safe {
+            display: inline-block;
+            color: rgba(46, 204, 113, 0.9);
+            text-shadow: 0 0 8px rgba(46, 204, 113, 0.4);
+        }
+
+        [data-safe-mode="on"] .mode-text.danger {
+            display: none;
+        }
+
+        [data-safe-mode="off"] .mode-text.safe {
+            display: none;
+        }
+
+        [data-safe-mode="off"] .mode-text.danger {
+            display: inline-block;
+            color: rgba(231, 76, 60, 0.9);
+            text-shadow: 0 0 8px rgba(231, 76, 60, 0.4);
+            animation: pulse-text 2s infinite;
+        }
+
+        @keyframes pulse-text {
+            0% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.8;
+            }
+        }
+
+        /* 提示框样式 */
+        .mode-alert {
+            position: fixed;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-100%);
+            background: var(--header-bg);
+            backdrop-filter: blur(10px);
+            padding: 15px 25px;
+            border-radius: 8px;
+            border: 2px solid rgba(46, 204, 113, 0.9);
+            box-shadow: 0 4px 15px var(--shadow-color);
+            color: var(--text-color);
+            font-size: 14px;
+            z-index: 1002;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s ease;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .mode-alert.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mode-alert .highlight {
+            color: rgba(46, 204, 113, 0.9);
+            font-weight: bold;
+            text-shadow: 0 0 8px rgba(46, 204, 113, 0.4);
+        }
+
+        .mode-alert .button-hint {
+            color: var(--text-color);
+            opacity: 0.8;
+            font-size: 12px;
+            margin-top: 5px;
+            display: block;
+        }
+
+        /* 危险模式提示框样式 */
+        .mode-alert.danger {
+            border: 2px solid rgba(231, 76, 60, 0.9);
+            animation: shake 0.5s ease-in-out;
+        }
+
+        .mode-alert.danger .highlight {
+            color: rgba(231, 76, 60, 0.9);
+            text-shadow: 0 0 8px rgba(231, 76, 60, 0.4);
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-52%) translateY(0); }
+            20%, 40%, 60%, 80% { transform: translateX(-48%) translateY(0); }
+        }
+
+        /* 炫彩呼吸效果 */
+        @keyframes rainbow-breath {
+            0% {
+                color: #ff6b6b;
+                text-shadow: 0 0 10px rgba(255, 107, 107, 0.7);
+            }
+            20% {
+                color: #ffd93d;
+                text-shadow: 0 0 10px rgba(255, 217, 61, 0.7);
+            }
+            40% {
+                color: #6c5ce7;
+                text-shadow: 0 0 10px rgba(108, 92, 231, 0.7);
+            }
+            60% {
+                color: #a8e6cf;
+                text-shadow: 0 0 10px rgba(168, 230, 207, 0.7);
+            }
+            80% {
+                color: #ff9ff3;
+                text-shadow: 0 0 10px rgba(255, 159, 243, 0.7);
+            }
+            100% {
+                color: #ff6b6b;
+                text-shadow: 0 0 10px rgba(255, 107, 107, 0.7);
+            }
+        }
+
+        [data-effect="on"] .subtitle {
+            animation: rainbow-breath 8s infinite;
+        }
+
+        [data-effect="off"] .subtitle {
+            animation: none;
+            color: var(--text-color);
+            text-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">日
+        <span class="button-tooltip">切换日/夜间主题</span>
+    </button>
+    <button class="effect-toggle" onclick="toggleEffect()">飘
+        <span class="button-tooltip">开启/关闭飘落效果</span>
+    </button>
+    <button class="safe-toggle" onclick="toggleSafeMode()">危
+        <span class="button-tooltip">切换安全/危险区域显示</span>
+    </button>
+    <div class="container">
+        <div class="title-container">
+            <h1>善氏高清跑商价格指引</h1>
+            <div class="subtitle">带带大白兔乱报答案</div>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="corner-header" rowspan="2">地区
+                            <span class="mode-text safe">安全区模式</span>
+                            <span class="mode-text danger">高危区模式</span>
+                        </th>
+                        <th rowspan="2">商品</th>
+                        <th colspan="2">买入价</th>
+                        <th colspan="8">卖出价(最高) <span class="region-indicator safe">安全区</span> <span class="region-indicator danger">危险区</span></th>
+                    </tr>
+                    <tr>
+                        <th>最低</th>
+                        <th>最高</th>
+                        <th>帮会</th>
+                        <th>汴京</th>
+                        <th>磁洲</th>
+                        <th>宋辽边境</th>
+                        <th>桃花坞</th>
+                        <th>杭州</th>
+                        <th>毁诺城</th>
+                        <th>仙居原</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 帮会商品 -->
+                    <tr class="region-帮会">
+                        <td class="region-column" rowspan="4">帮会</td>
+                        <td>面粉</td>
+                        <td>2400</td>
+                        <td>3600</td>
+                        <td></td>
+                        <td>3050</td>
+                        <td>3395</td>
+                        <td>4246</td>
+                        <td>3236</td>
+                        <td>3163</td>
+                        <td>3692</td>
+                        <td>3837</td>
+                    </tr>
+                    <tr class="region-帮会">
+                        <td>羊毛</td>
+                        <td>4000</td>
+                        <td>6000</td>
+                        <td></td>
+                        <td>5033</td>
+                        <td>5715</td>
+                        <td>7077</td>
+                        <td>5385</td>
+                        <td>5173</td>
+                        <td>6119</td>
+                        <td>6642</td>
+                    </tr>
+                    <tr class="region-帮会">
+                        <td>大理石</td>
+                        <td>4800</td>
+                        <td>7200</td>
+                        <td></td>
+                        <td>6098</td>
+                        <td>6622</td>
+                        <td>8216</td>
+                        <td>6494</td>
+                        <td>6280</td>
+                        <td>7499</td>
+                        <td>7912</td>
+                    </tr>
+                    <tr class="region-帮会">
+                        <td>沉香木</td>
+                        <td>8000</td>
+                        <td>12000</td>
+                        <td></td>
+                        <td>10464</td>
+                        <td>10908</td>
+                        <td>14153</td>
+                        <td>10306</td>
+                        <td>10445</td>
+                        <td>12117</td>
+                        <td>13024</td>
+                    </tr>
+
+                    <!-- 汴京商品 -->
+                    <tr class="region-汴京">
+                        <td class="region-column" rowspan="3">汴京</td>
+                        <td>木板年画</td>
+                        <td>2160</td>
+                        <td>3240</td>
+                        <td>2736</td>
+                        <td></td>
+                        <td>3104/<span class="special-price">4753</span></td>
+                        <td>3578</td>
+                        <td>2990</td>
+                        <td>2785</td>
+                        <td>3136</td>
+                        <td>3613</td>
+                    </tr>
+                    <tr class="region-汴京">
+                        <td>菊花酒</td>
+                        <td>3680</td>
+                        <td>5520</td>
+                        <td>4682</td>
+                        <td></td>
+                        <td>5211</td>
+                        <td>5701</td>
+                        <td>5226</td>
+                        <td>4727/<span class="special-price">7500</span></td>
+                        <td>5205</td>
+                        <td>5548</td>
+                    </tr>
+                    <tr class="region-汴京">
+                        <td>汴绣</td>
+                        <td>6400</td>
+                        <td>9600</td>
+                        <td>8143</td>
+                        <td></td>
+                        <td>9021</td>
+                        <td>10084</td>
+                        <td>9445</td>
+                        <td>8211</td>
+                        <td>9329/<span class="special-price">14926</span></td>
+                        <td>9850/<span class="special-price">13540</span></td>
+                    </tr>
+
+                    <!-- 磁洲商品 -->
+                    <tr class="region-磁洲">
+                        <td class="region-column" rowspan="3">磁洲</td>
+                        <td>芸苔油</td>
+                        <td>3080</td>
+                        <td>4620</td>
+                        <td>4577</td>
+                        <td>4493</td>
+                        <td></td>
+                        <td>4679</td>
+                        <td>4367</td>
+                        <td>4391</td>
+                        <td>4692</td>
+                        <td>4553</td>
+                    </tr>
+                    <tr class="region-磁洲">
+                        <td>八尺门书画</td>
+                        <td>3480</td>
+                        <td>5220</td>
+                        <td>5206</td>
+                        <td>5307</td>
+                        <td></td>
+                        <td>5557</td>
+                        <td>5045</td>
+                        <td>4725</td>
+                        <td>5476</td>
+                        <td>5235</td>
+                    </tr>
+                    <tr class="region-磁洲">
+                        <td>瓷器</td>
+                        <td>5680</td>
+                        <td>8520</td>
+                        <td>8800</td>
+                        <td>8877</td>
+                        <td></td>
+                        <td>8548/<span class="special-price">14545</span></td>
+                        <td>8071/<span class="special-price">13913</span></td>
+                        <td>8390</td>
+                        <td>8514</td>
+                        <td>8406</td>
+                    </tr>
+
+                    <!-- 宋辽边境商品 -->
+                    <tr class="region-宋辽边境">
+                        <td class="region-column" rowspan="3">宋辽边境</td>
+                        <td>炮打灯</td>
+                        <td>2160</td>
+                        <td>3240</td>
+                        <td>3016</td>
+                        <td>3236</td>
+                        <td>3080/<span class="special-price">5360</span></td>
+                        <td></td>
+                        <td>3146</td>
+                        <td>3188</td>
+                        <td>3082</td>
+                        <td>3344</td>
+                    </tr>
+                    <tr class="region-宋辽边境">
+                        <td>木材</td>
+                        <td>4320</td>
+                        <td>6480</td>
+                        <td>6662</td>
+                        <td>6473/<span class="special-price">10254</span></td>
+                        <td>6309/<span class="special-price">10361</span></td>
+                        <td></td>
+                        <td>7350</td>
+                        <td>6375</td>
+                        <td>6258</td>
+                        <td>6166</td>
+                    </tr>
+                    <tr class="region-宋辽边境">
+                        <td>雪狼皮</td>
+                        <td>5760</td>
+                        <td>8640</td>
+                        <td>8588</td>
+                        <td>8630</td>
+                        <td>8394</td>
+                        <td></td>
+                        <td>8877</td>
+                        <td>7991</td>
+                        <td>7860/<span class="special-price">13257</span></td>
+                        <td>8916/<span class="special-price">13921</span></td>
+                    </tr>
+
+                    <!-- 桃花坞商品 -->
+                    <tr class="region-桃花坞">
+                        <td class="region-column" rowspan="3">桃花坞</td>
+                        <td>一品桃花酥</td>
+                        <td>3080</td>
+                        <td>4620</td>
+                        <td>4068</td>
+                        <td>4418</td>
+                        <td>4322</td>
+                        <td>4661</td>
+                        <td></td>
+                        <td>4502</td>
+                        <td>5061</td>
+                        <td>6075</td>
+                    </tr>
+                    <tr class="region-桃花坞">
+                        <td>桃花醉</td>
+                        <td>3480</td>
+                        <td>5220</td>
+                        <td>4821</td>
+                        <td>5020</td>
+                        <td>4997</td>
+                        <td>5708</td>
+                        <td></td>
+                        <td>4801</td>
+                        <td>6045</td>
+                        <td>6863</td>
+                    </tr>
+                    <tr class="region-桃花坞">
+                        <td>名家字帖</td>
+                        <td>5680</td>
+                        <td>8520</td>
+                        <td>7732</td>
+                        <td>7421</td>
+                        <td>7803</td>
+                        <td>8815</td>
+                        <td></td>
+                        <td>7396</td>
+                        <td>10040</td>
+                        <td>8806</td>
+                    </tr>
+
+                    <!-- 杭州商品 -->
+                    <tr class="region-杭州">
+                        <td class="region-column" rowspan="3">杭州</td>
+                        <td>丝绸</td>
+                        <td>3244</td>
+                        <td>4620</td>
+                        <td>3967</td>
+                        <td>4684</td>
+                        <td>3981</td>
+                        <td>4956</td>
+                        <td>4084</td>
+                        <td></td>
+                        <td>4567</td>
+                        <td>4926</td>
+                    </tr>
+                    <tr class="region-杭州">
+                        <td>胭脂</td>
+                        <td>3480</td>
+                        <td>5220</td>
+                        <td>4488</td>
+                        <td>5293</td>
+                        <td>5046</td>
+                        <td>5507</td>
+                        <td>5136</td>
+                        <td></td>
+                        <td>5643/<span class="special-price">8216</span></td>
+                        <td>5968</td>
+                    </tr>
+                    <tr class="region-杭州">
+                        <td>西湖龙井</td>
+                        <td>5834</td>
+                        <td>8520</td>
+                        <td>7356</td>
+                        <td>8147</td>
+                        <td>7426</td>
+                        <td>10331</td>
+                        <td>8178/<span class="special-price">13288</span></td>
+                        <td></td>
+                        <td>8569</td>
+                        <td>8627</td>
+                    </tr>
+
+                    <!-- 毁诺城商品 -->
+                    <tr class="region-毁诺城">
+                        <td class="region-column" rowspan="3">毁诺城</td>
+                        <td>团扇</td>
+                        <td>3080</td>
+                        <td>4620</td>
+                        <td>4307</td>
+                        <td>4727</td>
+                        <td>4880</td>
+                        <td>5267</td>
+                        <td>4348</td>
+                        <td>4666</td>
+                        <td></td>
+                        <td>4941</td>
+                    </tr>
+                    <tr class="region-毁诺城">
+                        <td>人参</td>
+                        <td>3480</td>
+                        <td>5220</td>
+                        <td>4916</td>
+                        <td>5360</td>
+                        <td>5425</td>
+                        <td>5952</td>
+                        <td>5051</td>
+                        <td>5106/<span class="special-price">8048</span></td>
+                        <td></td>
+                        <td>5349/<span class="special-price">8307</span></td>
+                    </tr>
+                    <tr class="region-毁诺城">
+                        <td>深山雪莲</td>
+                        <td>5680</td>
+                        <td>8520</td>
+                        <td>8221</td>
+                        <td>8158</td>
+                        <td>8437</td>
+                        <td>9716</td>
+                        <td>7746</td>
+                        <td>8670</td>
+                        <td></td>
+                        <td>9047</td>
+                    </tr>
+
+                    <!-- 仙居原商品 -->
+                    <tr class="region-仙居原">
+                        <td class="region-column" rowspan="3">仙居原</td>
+                        <td>鹅卵石</td>
+                        <td>3080</td>
+                        <td>4620</td>
+                        <td>4877</td>
+                        <td>4751</td>
+                        <td>4749</td>
+                        <td>5220</td>
+                        <td>5473</td>
+                        <td>4565</td>
+                        <td>4455</td>
+                        <td></td>
+                    </tr>
+                    <tr class="region-仙居原">
+                        <td>蜂王浆</td>
+                        <td>3480</td>
+                        <td>5220</td>
+                        <td>5649</td>
+                        <td>5480</td>
+                        <td>5423</td>
+                        <td>5805</td>
+                        <td>6067</td>
+                        <td>5169/<span class="special-price">8452</span></td>
+                        <td>5358</td>
+                        <td></td>
+                    </tr>
+                    <tr class="region-仙居原">
+                        <td>野生灵芝</td>
+                        <td>5680</td>
+                        <td>8520</td>
+                        <td>9313</td>
+                        <td>8881</td>
+                        <td>8095</td>
+                        <td>9920</td>
+                        <td>8761/<span class="special-price">10176</span></td>
+                        <td>8741</td>
+                        <td>8293</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            
+            const button = document.querySelector('.theme-toggle');
+            button.textContent = newTheme === 'light' ? '日' : '月';
+            
+            // 保存用户的主题偏好
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // 页面加载时检查用户的主题偏好
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.documentElement.setAttribute('data-theme', savedTheme);
+                const button = document.querySelector('.theme-toggle');
+                button.textContent = savedTheme === 'light' ? '日' : '月';
+            }
+
+            // 设置初始特效状态
+            document.documentElement.setAttribute('data-effect', 'on');
+            let particleInterval;
+
+            function createParticle() {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const particle = document.createElement('div');
+                
+                if (currentTheme === 'light') {
+                    // 创建樱花
+                    particle.className = 'particle sakura';
+                    const rotateAngle = Math.random() * 360;
+                    particle.style.setProperty('--rotate-deg', `${rotateAngle}deg`);
+                } else {
+                    // 创建雪花
+                    particle.className = 'particle snowflake';
+                    const size = Math.random() * 4 + 2;
+                    particle.style.width = `${size}px`;
+                    particle.style.height = `${size}px`;
+                }
+                
+                // 随机起始位置
+                const startX = Math.random() * window.innerWidth;
+                particle.style.left = `${startX}px`;
+                particle.style.top = '-10px';
+                
+                // 随机结束位置
+                const endX = startX + (Math.random() - 0.5) * 400;
+                particle.style.setProperty('--end-x', `${endX}px`);
+                
+                // 随机动画持续时间
+                const duration = Math.random() * 4 + 3;
+                particle.style.animationDuration = `${duration}s`;
+                
+                // 添加到页面
+                document.body.appendChild(particle);
+                
+                // 动画结束后移除
+                setTimeout(() => {
+                    particle.remove();
+                }, duration * 1000);
+            }
+
+            // 开始特效
+            function startParticleEffect() {
+                if (!particleInterval) {
+                    particleInterval = setInterval(createParticle, 300);
+                }
+            }
+
+            // 停止特效
+            function stopParticleEffect() {
+                if (particleInterval) {
+                    clearInterval(particleInterval);
+                    particleInterval = null;
+                }
+                // 清除所有现有粒子
+                document.querySelectorAll('.particle').forEach(p => p.remove());
+            }
+
+            // 启动初始特效
+            startParticleEffect();
+
+            // 添加特效切换功能
+            window.toggleEffect = function() {
+                const html = document.documentElement;
+                const currentEffect = html.getAttribute('data-effect');
+                const newEffect = currentEffect === 'on' ? 'off' : 'on';
+                html.setAttribute('data-effect', newEffect);
+                
+                const button = document.querySelector('.effect-toggle');
+                button.textContent = newEffect === 'on' ? '飘' : '关';
+
+                if (newEffect === 'on') {
+                    startParticleEffect();
+                } else {
+                    stopParticleEffect();
+                }
+            };
+
+            // 监听主题变化
+            const observer = new MutationObserver((mutations) => {
+                mutations.forEach((mutation) => {
+                    if (mutation.attributeName === 'data-theme') {
+                        // 清除所有现有粒子
+                        document.querySelectorAll('.particle').forEach(p => p.remove());
+                        // 如果特效是开启状态，重新启动特效
+                        if (document.documentElement.getAttribute('data-effect') === 'on') {
+                            startParticleEffect();
+                        }
+                    }
+                });
+            });
+
+            observer.observe(document.documentElement, {
+                attributes: true,
+                attributeFilter: ['data-theme']
+            });
+
+            // 设置初始安全模式状态为开启
+            document.documentElement.setAttribute('data-safe-mode', 'on');
+            const safeButton = document.querySelector('.safe-toggle');
+            safeButton.textContent = '安';
+
+            // 创建并显示提示框
+            const alert = document.createElement('div');
+            alert.className = 'mode-alert';
+            alert.innerHTML = `
+                <span class="highlight">安全区模式</span> 已开启<br>
+                <span class="button-hint">仅显示安全区报价，可点按右上角按钮切换</span>
+            `;
+            document.body.appendChild(alert);
+
+            // 延迟显示提示框
+            setTimeout(() => {
+                alert.classList.add('show');
+            }, 500);
+
+            // 3秒后自动隐藏提示框
+            setTimeout(() => {
+                alert.classList.remove('show');
+                // 完全移除提示框
+                setTimeout(() => {
+                    alert.remove();
+                }, 500);
+            }, 3500);
+
+            // 修改安全模式切换功能
+            window.toggleSafeMode = function() {
+                const html = document.documentElement;
+                const currentMode = html.getAttribute('data-safe-mode');
+                const newMode = currentMode === 'off' ? 'on' : 'off';
+                html.setAttribute('data-safe-mode', newMode);
+                
+                const button = document.querySelector('.safe-toggle');
+                button.textContent = newMode === 'off' ? '危' : '安';
+
+                // 创建提示框
+                const alert = document.createElement('div');
+                alert.className = `mode-alert ${newMode === 'off' ? 'danger' : ''}`;
+                
+                if (newMode === 'off') {
+                    alert.innerHTML = `
+                        <span class="highlight">高危区模式</span> 已开启<br>
+                        <span class="button-hint">小心剑舞的傻逼</span>
+                    `;
+                } else {
+                    alert.innerHTML = `
+                        <span class="highlight">安全区模式</span> 已开启<br>
+                        <span class="button-hint">仅显示安全区报价，可点按右上角按钮切换</span>
+                    `;
+                }
+                
+                document.body.appendChild(alert);
+
+                // 延迟显示提示框
+                setTimeout(() => {
+                    alert.classList.add('show');
+                }, 10);
+
+                // 3秒后自动隐藏提示框
+                setTimeout(() => {
+                    alert.classList.remove('show');
+                    // 完全移除提示框
+                    setTimeout(() => {
+                        alert.remove();
+                    }, 500);
+                }, 3000);
+            };
+
+            // 修改显示价格标签的逻辑
+            function showPriceTooltip(priceInfo, rank, cell) {
+                const isSafe = isSafeRegion(priceInfo.region);
+                const safeMode = document.documentElement.getAttribute('data-safe-mode') === 'on';
+                
+                // 在安全模式下，只显示安全区的标签
+                if (safeMode && !isSafe) {
+                    return;
+                }
+
+                const tooltip = document.createElement('div');
+                tooltip.className = `price-tooltip price-tooltip-${isSafe ? 'safe' : 'danger'}`;
+                tooltip.textContent = `${priceInfo.region}-${rank}`;
+                cell.appendChild(tooltip);
+                setTimeout(() => tooltip.classList.add('show'), 10);
+            }
+
+            // 修改处理标签显示逻辑
+            function handlePriceHighlight(prices, safePrices, dangerPrices) {
+                const safeMode = document.documentElement.getAttribute('data-safe-mode') === 'on';
+                
+                if (prices.length > 0) {
+                    if (!isSafeRegion(prices[0].region) && safePrices.length > 0) {
+                        if (!safeMode) {
+                            // 显示危险区最高价
+                            prices[0].cell.classList.add('price-highlight-highest');
+                            showPriceTooltip(prices[0], '最高', prices[0].cell);
+                            
+                            // 显示危险区次高价
+                            if (dangerPrices.length > 1) {
+                                dangerPrices[1].cell.classList.add('price-highlight-second');
+                                showPriceTooltip(dangerPrices[1], '次高', dangerPrices[1].cell);
+                            }
+                        }
+                        
+                        // 显示安全区价格
+                        safePrices[0].cell.classList.add(safeMode ? 'price-highlight-highest' : 'price-highlight-second');
+                        showPriceTooltip(safePrices[0], '最高', safePrices[0].cell);
+                        
+                        if (safePrices.length > 1) {
+                            safePrices[1].cell.classList.add('price-highlight-second');
+                            showPriceTooltip(safePrices[1], '次高', safePrices[1].cell);
+                        }
+                    } else {
+                        // 正常显示最高价（如果是安全区或者非安全模式）
+                        if (!safeMode || isSafeRegion(prices[0].region)) {
+                            prices[0].cell.classList.add('price-highlight-highest');
+                            showPriceTooltip(prices[0], '最高', prices[0].cell);
+                            
+                            // 寻找并显示次高价
+                            let secondIndex = 1;
+                            while (secondIndex < prices.length && 
+                                  (prices[secondIndex].cell === prices[0].cell || 
+                                   prices[secondIndex].price === prices[0].price)) {
+                                secondIndex++;
+                            }
+                            
+                            if (secondIndex < prices.length && (!safeMode || isSafeRegion(prices[secondIndex].region))) {
+                                prices[secondIndex].cell.classList.add('price-highlight-second');
+                                showPriceTooltip(prices[secondIndex], '次高', prices[secondIndex].cell);
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 修改商品名称的鼠标事件处理
+            const rows = document.querySelectorAll('tbody tr');
+            rows.forEach(row => {
+                const cells = Array.from(row.cells);
+                const productCell = cells.find(cell => !cell.hasAttribute('rowspan'));
+                
+                if (productCell) {
+                    productCell.classList.add('product-name');
+                    const sellPriceCells = cells.slice(cells.indexOf(productCell) + 3);
+                    sellPriceCells.forEach(cell => cell.classList.add('sell-price'));
+                    
+                    productCell.addEventListener('mouseenter', () => {
+                        productCell.classList.add('active');
+                        let prices = [];
+                        let safePrices = [];
+                        let dangerPrices = [];
+                        
+                        sellPriceCells.forEach(cell => {
+                            const priceText = cell.textContent.trim();
+                            if (!priceText) return;
+                            
+                            const normalPrice = parseFloat(priceText.split('/')[0].replace(/[^0-9.]/g, ''));
+                            if (normalPrice > 0) {
+                                const region = getRegionName(cell);
+                                const priceInfo = {
+                                    price: normalPrice,
+                                    cell: cell,
+                                    region: region
+                                };
+                                
+                                prices.push(priceInfo);
+                                if (isSafeRegion(region)) {
+                                    safePrices.push(priceInfo);
+                                } else {
+                                    dangerPrices.push(priceInfo);
+                                }
+                            }
+                        });
+                        
+                        safePrices.sort((a, b) => b.price - a.price);
+                        dangerPrices.sort((a, b) => b.price - a.price);
+                        prices.sort((a, b) => b.price - a.price);
+                        
+                        handlePriceHighlight(prices, safePrices, dangerPrices);
+                    });
+                    
+                    productCell.addEventListener('mouseleave', () => {
+                        productCell.classList.remove('active');
+                        sellPriceCells.forEach(cell => {
+                            cell.classList.remove('price-highlight-highest', 'price-highlight-second');
+                            const tooltips = cell.querySelectorAll('.price-tooltip');
+                            tooltips.forEach(tooltip => tooltip.remove());
+                        });
+                    });
+                }
+            });
+        });
+
+        function isSafeRegion(regionName) {
+            return ['杭州', '帮会', '汴京'].includes(regionName);
+        }
+
+        function getRegionName(cell) {
+            const row = cell.parentElement;
+            const cells = Array.from(row.cells);
+            const priceStartIndex = cells.findIndex(c => c === cell);
+            const mapIndex = cells.length - priceStartIndex - 1;
+            const mapNames = ['仙居原', '毁诺城', '杭州', '桃花坞', '宋辽边境', '磁洲', '汴京', '帮会'];
+            return mapNames[mapIndex] || '未知地图';
+        }
+    </script>
+</body>
+</html> 
